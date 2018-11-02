@@ -47,7 +47,7 @@ namespace sugi.cc
             if (framecount > 0)
             {
                 var name = "Capture/frame" + Time.frameCount.ToString("00000") + ".png";
-                Application.CaptureScreenshot(name, superSize);
+                UnityEngine.ScreenCapture.CaptureScreenshot(name, superSize);
             }
             framecount++;
         }
@@ -57,7 +57,7 @@ namespace sugi.cc
         {
             System.IO.Directory.CreateDirectory("ScreenShot");
             var name = "ScreenShot/Capture.png";
-            Application.CaptureScreenshot(name);
+			UnityEngine.ScreenCapture.CaptureScreenshot(name);
         }
 
         [MenuItem("ScreenCapture/Start/FPS:10")]

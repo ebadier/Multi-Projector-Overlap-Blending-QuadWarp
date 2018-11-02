@@ -22,6 +22,7 @@ public class ProjectionController : MonoBehaviour
         SettingManager.AddSettingMenu(setting, filePath);
     }
 
+	[ContextMenu("BuildProjections")]
     void BuildProjections()
     {
         var numX = setting.numX;
